@@ -1,21 +1,26 @@
 angular.module('app')
 	.factory('todoFactory', ($http, API_URL) => {
 		// cached todo
-		let todos = null
+		let searchedMovies = null;
+		let chosenMovie = null;
 
 		return {
-			getTodos () {
+			searchMovie (searchTerm) {
 				return $http
-					.get(`${API_URL}.json`)
+					.get(`${API_URL}s=${searchTerm}`)
 					.then(res => res.data)
-					.then(t => todos = t)
+					.then(t => searchedMovies = t)
 			},
 
-			toggleTodo (id) {
+			getMovieInfo (id) {
 				return $http
-					.patch(`${API_URL}/${id}.json`,
-						{ completed: todos[id].completed }
-					)
+					.get(`${API_URL}/i=${id}`)
+					.then(res => res.data)
+					.then(t => chosenMovie = t)
+			},
+
+			getChosenMovie () {
+				return chosenMovie;
 			}
 		}
 	})
