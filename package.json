@@ -1,0 +1,19 @@
+{
+  "name": "movie-history-jmc-io",
+  "version": "1.0.0",
+  "description": "You will be split up into teams of three, and your team will build a new application to keep track of movies that you have seen, and want to see, with your own ratings based on [OMDb API](http://omdbapi.com/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nss-day-cohort-13/movie-history-jmc-io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nss-day-cohort-13/movie-history-jmc-io/issues"
+  },
+  "homepage": "https://github.com/nss-day-cohort-13/movie-history-jmc-io#readme"
+}
