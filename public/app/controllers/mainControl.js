@@ -1,8 +1,8 @@
 'use strict';
 
-app.controller("MovieDoing", ($scope, $http, omdbFactory, FB_URL) => {
+app.controller("movieDoing", ($scope, $http, omdbFactory, FB_URL) => {
 	 $http
-    .get(FB_URL)
+	 .get(FB_URL)
     .then((response) => {
       $scope.movies = response.data;
       console.log("Movies!", $scope.movies);
@@ -12,6 +12,5 @@ app.controller("MovieDoing", ($scope, $http, omdbFactory, FB_URL) => {
 
 
   omdbFactory.searchMovie("movie").then;
-
 
 })
