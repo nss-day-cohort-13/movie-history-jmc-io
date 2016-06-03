@@ -1,17 +1,15 @@
 'use strict';
 
-app.controller("MovieDoing", ($scope, $http) => {
+app.controller("MovieDoing", ($scope, $http, todoFactory) => {
+	 $http.get('https://movie-history-e5c21.firebaseio.com/.json')
+    .then((response) => {
+      $scope.movies = response.data.movies;
+    })
 
 
 
 
-  todoFactory.getTodos().then(todos => t.todos = todos)
+  todoFactory.searchMovie("movie").then;
 
-    t.toggleTodo = (id) => {
-      // optimistic update
-      t.todos[id].completed = !t.todos[id].completed
-
-      todoFactory.toggleTodo(id)
-        .catch(res => t.todos[id].completed = !t.todos[id].completed)
-    }
+  
 })
