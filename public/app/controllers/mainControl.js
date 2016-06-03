@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("MovieDoing", ($scope, $http, todoFactory) => {
+app.controller("movieDoing", ($scope, $http, todoFactory) => {
 	 $http.get('https://movie-history-e5c21.firebaseio.com/.json')
     .then((response) => {
       $scope.movies = response.data.movies;
@@ -11,5 +11,5 @@ app.controller("MovieDoing", ($scope, $http, todoFactory) => {
 
   todoFactory.searchMovie("movie").then;
 
-  
+
 })

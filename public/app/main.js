@@ -1,3 +1,3 @@
 'use strict';
 
-const app = angular.module("MovieHistory", ["ngRoute", "angular.filter"]);
+const app = angular.module("movieHistory", ["ngRoute", "angular.filter"]);

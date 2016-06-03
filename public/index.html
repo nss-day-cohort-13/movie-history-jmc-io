@@ -8,12 +8,16 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 
-<body ng-app="MovieHistory" >
+<body ng-app="movieHistory">
 	<div ng-view></div>
-	<section ng-controller="MovieDoing"> 
+	<section ng-controller="movieDoing">
 
 		<h1>{{title}}</h1>
-			<div>
+			<div id="menu">
+
+				<a ng-click="setRoute('home')" class="btn">home</a>
+				<a ng-click="setRoute('add')" class="btn">add</a>
+
 
 				<input id="title" placeholder="Movie Title" type="text" name="">
 
