@@ -1,15 +1,17 @@
 'use strict';
 
-app.controller("MovieDoing", ($scope, $http, todoFactory) => {
-	 $http.get('https://movie-history-e5c21.firebaseio.com/.json')
+app.controller("MovieDoing", ($scope, $http, omdbFactory, FB_URL) => {
+	 $http
+    .get(FB_URL)
     .then((response) => {
-      $scope.movies = response.data.movies;
+      $scope.movies = response.data;
+      console.log("Movies!", $scope.movies);
     })
 
 
 
 
-  todoFactory.searchMovie("movie").then;
+  omdbFactory.searchMovie("movie").then;
 
-  
+
 })
