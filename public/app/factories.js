@@ -1,14 +1,13 @@
-angular.module('app')
-	.factory('todoFactory', ($http, API_URL) => {
+app.factory('todoFactory', ($http, API_URL) => {
 		// cached todo
 		let searchedMovies = null;
 		let chosenMovie = null;
 
 		return {
-			searchMovie (searchTerm) {
-				return $http
+			searchMovie (searchTerm) { console.log("search", searchTerm);
+				return $http				
 					.get(`${API_URL}s=${searchTerm}`)
-					.then(res => res.data)
+					.then(function(res){console.log(res.data)})
 					.then(t => searchedMovies = t)
 			},
 
