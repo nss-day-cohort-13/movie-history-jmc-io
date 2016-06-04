@@ -2,6 +2,26 @@
 <a href="#/">Home</a> <a href="#/">Back</a>
 <h1>{{ helloPerson.header | slugify }}</h1>
 
-<h1>Hello</h1>
-<p>This is a test</p>
+<h2>Search Movies by Titles</h2>
+<form ng-submit="omdbSearch()">
+  <div class="form-group">
+    <input class="form-control" type="text" ng-model="searchInput">
+    <button class="btn btn-default" type="submit">Go</button>
+  </div>
+</form>
 
+<div ng-repeat="movie in movieArr">
+  <div class="row">
+    <h4>{{movie.Title}}</h4>
+    <img src="{{movie.Poster}}" class="img-rounded" alt="">
+    <p>{{movie.Year}}</p>
+    <button ng-click="addMovieToFirebase()">Add</button>
+    <button ng-click="getInfo(movie.imdbID)">More Info</button>
+    <div>
+      <p>{{selectedMovie.Actors}}</p>
+      <p>{{selectedMovie.Released}}</p>
+      <p>{{selectedMovie.Rated}}</p>
+      <p>{{selectedMovie.Plot}}</p>
+    </div>
+  </div>
+</div>

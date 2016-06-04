@@ -2,6 +2,7 @@ app
 	.config(($routeProvider) => {
 		$routeProvider
 			.when('/home', {
+        controller: 'movieDoing',
 				templateUrl: 'app/partials/home.html'
 			})
 			.when('/add', {

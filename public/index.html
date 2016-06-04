@@ -9,11 +9,11 @@
 </head>
 
 <body ng-app="movieHistory">
-	<div ng-view></div>
-	<section ng-controller="movieDoing">
+	<div ng-view class="container"></div>
+	<div ng-controller="movieDoing">
 
-		<h1>{{title}}</h1>
-			<div id="menu">
+		<!-- <h1>{{title}}</h1> -->
+<!-- 			<div id="menu">
 
 				<a ng-click="setRoute('home')" class="btn">home</a>
 				<a ng-click="setRoute('add')" class="btn">add</a>
@@ -22,9 +22,9 @@
 				<input id="title" placeholder="Movie Title" type="text" name="">
 
 				<input id="year" placeholder="Movie Year" type="" name="">
-			</div>
+			</div> -->
 
-	</section>
+	</div>
 
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
